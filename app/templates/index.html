@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Splitter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <style>
+    [class*="col-"] {
+    background-color: #eee;
+    border-right: 2px solid #fff;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 2rem;
+    }
+    </style>
+</head>
+
+<body>
+  <!-- <script>
+  function Save(){
+    var input = document.getElementById("input")
+    localStorage.text = input.value
+    document.getElementById("result").innerHTML = localStorage.getItem("text");
+  }
+  // function Load(){
+  //   document.getElementById("result").innerHTML = localStorage.getItem("text");
+  // }
+  </script> -->
+  <!-- <script src="js/bootstrap.js"></script> -->
+  <div class="container">
+   <div class="row">
+    <div class="col-12">Сплиттер</div>
+    <div class="col-6">
+      <img src="static/images/pic.jpg" alt='body backgr' width=500>
+    </div>
+    <div class="col-6">Анализ
+      <div id='result'></div>
+      <!-- <script type="text/javascript">
+      var x = localStorage.getItem("text")
+      if !(x===null){
+        document.getElementById("result").innerHTML = x;
+      }
+      </script> -->
+      <form method="post">
+        <input class="form-control" type="text" name="input" id="input">
+        <button type="submit">Анализировать</button>
+      </form>
+      {% if wd %}
+      {{ wd }}
+      <table>
+      {% for i in a %}
+      <tr><td>{{ i }}</td></tr>
+      {% endfor %}
+      </table>
+      {% endif %}
+    </div>
+   </div>
+  </div>
+
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
