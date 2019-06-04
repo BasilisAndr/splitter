@@ -21,48 +21,6 @@ services:
     ports:
      - "80:80"
     tty: true
-  # links:
-  #  - redis
-  #  - minio
-  #  - mysql
-  #  - hse-api-celery
+    networks:
+     - default
     environment: *common-variables
-#
-#  hse-api-celery:
-#   # image: celery
-#   build: .
-#   command: celery -A main.celery worker
-#   # volumes:
-#   #  - redis:/data
-#   links:
-#    - redis
-#    - minio
-#    - mysql
-#   environment: *common-variables
-# #
-#   minio:
-#     image: minio/minio:latest
-#     # volumes:
-#     #  - data:/data
-#     ports:
-#      - "9000:9000"
-#     command: server /data/minio
-#     environment: *common-variables
-#
-#  mysql:
-#   image: mysql
-#   # volumes:
-#   #  - mysqldata:/var/lib/mysql
-#   command: --default-authentication-plugin=mysql_native_password
-#   restart: always
-#   environment: *common-variables
-#
-#  redis:
-#   image: redis:latest
-#   # volumes:
-#   #  - redis:/data
-#
-# volumes:
-#   # mysqldata:
-#   data:
-#   # redis:
