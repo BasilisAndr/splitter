@@ -4,7 +4,7 @@
 
 # splitter
 
-Ubuntu with HFST installed for Flask app to run.
+Debian with HFST installed for Flask app to run.
 
 ## Description
 
