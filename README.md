@@ -11,7 +11,3 @@ Images use [tiangolo/uwsgi-nginx-flask-docker](https://hub.docker.com/r/tiangolo
 ## Description
 
 Use `docker-compose build` and `docker-compose up` to run image in full development environment.
-
-**GitHub repo**: <https://github.com/hseling/hseling-api-anti-slovari>
-
-**Docker Hub image**: <https://hub.docker.com/r/hseling/hseling-api-anti-slovari/>
